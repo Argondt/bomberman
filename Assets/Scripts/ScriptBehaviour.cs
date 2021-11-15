@@ -5,6 +5,11 @@ using UnityEngine;
 public class ScriptBehaviour : MonoBehaviour
 {
     public Vector2 speed = new Vector2(20, 20);
+    Rigidbody2D m_Rigidbody;
+
+    void Start() {
+        m_Rigidbody = GetComponent<Rigidbody2D>();
+    }
    
 
     // Update is called once per frame
@@ -16,8 +21,6 @@ public class ScriptBehaviour : MonoBehaviour
 
         Vector3 movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
 
-        movement *= Time.deltaTime;
-
-        transform.Translate(movement);
+        m_Rigidbody.MovePosition(transform.position + movement * Time.deltaTime);
     }
 }
