@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptBehaviour : MonoBehaviour
+public class P2_movement : MonoBehaviour
 {
     public Vector2 speed = new Vector2(20, 20);
     Rigidbody2D m_Rigidbody;
@@ -16,8 +16,8 @@ public class ScriptBehaviour : MonoBehaviour
     void Update()
     {
 
-        float inputX = Input.GetAxis("Horizontal_P1");
-        float inputY = Input.GetAxis("Vertical_P1");
+        float inputX = Input.GetAxis("Horizontal_P2");
+        float inputY = Input.GetAxis("Vertical_P2");
 
         Vector3 movement = new Vector3(speed.x * inputX, speed.y * inputY, 0);
 
