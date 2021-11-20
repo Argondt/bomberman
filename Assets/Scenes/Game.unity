@@ -123,18 +123,13 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &257190182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7197946856799037953, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
-  m_PrefabInstance: {fileID: 1366206966}
-  m_PrefabAsset: {fileID: 0}
 --- !u!70 &257190183
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257190182}
+  m_GameObject: {fileID: 7197946858126951415}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -151,7 +146,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257190182}
+  m_GameObject: {fileID: 7197946858126951415}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -274,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemap: {fileID: 853374175}
-  bomb: {fileID: 4118369192916073371, guid: 407d5ef04709da249ab42f8601e48cb6, type: 3}
+  bomb: {fileID: 5619075152549268541, guid: 7e4f187eb316c2d4eb160369d4e95e7e, type: 3}
 --- !u!4 &373161573
 Transform:
   m_ObjectHideFlags: 0
@@ -3132,7 +3127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3701361664016723235, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6259790771254518403, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
       propertyPath: m_RootOrder
@@ -3379,18 +3374,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547692038}
   m_CullTransparentMesh: 1
---- !u!1 &1644252964 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7197946856799037953, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
-  m_PrefabInstance: {fileID: 572092898}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1644252965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644252964}
+  m_GameObject: {fileID: 7197946856230099939}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c214f03c2eff1be46ab71b3f349b2d19, type: 3}
@@ -3403,7 +3393,7 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644252964}
+  m_GameObject: {fileID: 7197946856230099939}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -3420,7 +3410,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644252964}
+  m_GameObject: {fileID: 7197946856230099939}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -3691,3 +3681,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7197946856230099939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7197946856799037953, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
+  m_PrefabInstance: {fileID: 572092898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7197946858126951415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7197946856799037953, guid: 5d6ba91acc11d7845af37a64bc1fb277, type: 3}
+  m_PrefabInstance: {fileID: 1366206966}
+  m_PrefabAsset: {fileID: 0}
