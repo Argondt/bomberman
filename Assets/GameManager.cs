@@ -7,26 +7,31 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 
 {
-	public GameOverMenu GameOverMenu;
-	public void GameOver()
+	
+	public Text text;
+	void Update()
     {
 		if (GameObject.FindWithTag("Player") == null && GameObject.FindWithTag("Player2") == null)
 		{
+			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
 			string remis = "remis";
-			GameOverMenu.Setup(remis);
+			text.text = remis;
 			
 		}
 		else if (GameObject.FindWithTag("Player") == null)
 		{
+			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
 			string p1Win = "Win p1";
-			GameOverMenu.Setup(p1Win);
 			
+			text.text = p1Win;
+
 		}
 		else if (GameObject.FindWithTag("Player2") == null)
 		{
-			string p2Win = "Win p1";
-			GameOverMenu.Setup(p2Win);
-			
+			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
+			string p2Win = "Win p2";
+			text.text = p2Win;
+
 		}
 	}
 	
