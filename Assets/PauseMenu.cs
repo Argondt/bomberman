@@ -42,7 +42,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        Application.LoadLevel(Application.loadedLevel);
+       // Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene("Game");
         Debug.Log("Restart");
     }
     public void LoadMenu() 
