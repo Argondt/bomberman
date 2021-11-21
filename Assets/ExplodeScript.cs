@@ -5,9 +5,10 @@ using UnityEngine;
 public class ExplodeScript : MonoBehaviour
 {
     public float countdown2 = 0.3f;
+	public GameManager gm;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -20,6 +21,8 @@ public class ExplodeScript : MonoBehaviour
 		{
            // Debug.Log("Destroy explode");
 			Destroy(gameObject);
+			
+			
 		}
 	}
 
@@ -28,6 +31,7 @@ public class ExplodeScript : MonoBehaviour
 	   if(collider.tag == "Player" || collider.tag == "Player2") {
 			Debug.Log("Destroy player: " + collider.tag);
 			Destroy(collider.gameObject);
+			
 	   }
     }
 }
