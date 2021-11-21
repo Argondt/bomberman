@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPause = false;
+    public static bool GameIsPause;
     public GameObject pauseMenuUi;
+
+    void Start() {
+        Resume();
+    }
 
 
     // Update is called once per frame
@@ -38,7 +42,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
+        Application.LoadLevel(Application.loadedLevel);
+        Debug.Log("Restart");
     }
     public void LoadMenu() 
     {

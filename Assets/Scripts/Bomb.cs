@@ -11,6 +11,10 @@ public class Bomb : MonoBehaviour
 	{
 		countdown -= Time.deltaTime;
 
+		if (countdown <= 1f && gameObject.GetComponent<Rigidbody2D>().simulated == false) {
+			gameObject.GetComponent<Rigidbody2D>().simulated = true;
+		}
+
 		if (countdown <= 0f)
 		{
 			FindObjectOfType<MapDestroyer>().Explode(transform.position);
