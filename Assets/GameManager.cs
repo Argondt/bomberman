@@ -9,30 +9,26 @@ public class GameManager : MonoBehaviour
 {
 	
 	public Text text;
+
 	void Update()
     {
 		if (GameObject.FindWithTag("Player") == null && GameObject.FindWithTag("Player2") == null)
 		{
-			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
-			string remis = "remis";
-			text.text = remis;
-			
+			foundWinner("There is no winner!");
 		}
 		else if (GameObject.FindWithTag("Player") == null)
 		{
-			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
-			string p1Win = "Win p1";
-			
-			text.text = p1Win;
-
+			foundWinner("Player 2 is a winner!");
 		}
 		else if (GameObject.FindWithTag("Player2") == null)
 		{
-			FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
-			string p2Win = "Win p2";
-			text.text = p2Win;
-
+			foundWinner("Player 1 is a winner!");
 		}
+	}
+
+	void foundWinner(string winner) {
+		FindObjectOfType<PauseMenu>().WlaczanieGameOverPanel();
+		text.text = winner;
 	}
 	
 

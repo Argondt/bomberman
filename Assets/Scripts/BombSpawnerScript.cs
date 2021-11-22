@@ -19,46 +19,37 @@ public class BombSpawnerScript : MonoBehaviour
 	{
 		if (Input.GetKey("space") && !bombSetted)
 		{
-			Debug.Log("bomb");
-			// Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector3  worldPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-			Debug.Log(worldPos);
-			Vector3Int cell = tilemap.WorldToCell(worldPos);
-			Debug.Log(cell);
-			Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cell);
-			Debug.Log(cellCenterPos);
-
-			Instantiate(bomb, cellCenterPos, Quaternion.identity);
-			bombSetted = true;
-
+			spawnBomb("Player");
 		}
 
 		if (Input.GetKeyUp("space"))
         {
 			bombSetted = false;
-            print("Space key was released");
+           // Debug.Log("Space key was released");
         }
 
 		if (Input.GetKey(KeyCode.Return) && !bombSetted)
 		{
-			Debug.Log("bomb");
-			// Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector3  worldPos = GameObject.FindGameObjectWithTag("Player2").transform.position;
-			Debug.Log(worldPos);
-			Vector3Int cell = tilemap.WorldToCell(worldPos);
-			Debug.Log(cell);
-			Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cell);
-			Debug.Log(cellCenterPos);
-
-			Instantiate(bomb, cellCenterPos, Quaternion.identity);
-			bombSetted = true;
-
+			spawnBomb("Player2");
 		}
 
 		if (Input.GetKeyUp(KeyCode.Return))
         {
 			bombSetted = false;
-            print("Space key was released");
+           // Debug.Log("Return key was released");
         }
+	}
+
+	void spawnBomb(string playerTag) {
+		// Debug.Log("bomb");
+			Vector3  worldPos = GameObject.FindGameObjectWithTag(playerTag).transform.position;
+			// Debug.Log(worldPos);
+			Vector3Int cell = tilemap.WorldToCell(worldPos);
+			// Debug.Log(cell);
+			Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cell);
+			// Debug.Log(cellCenterPos);
+
+			Instantiate(bomb, cellCenterPos, Quaternion.identity);
+			bombSetted = true;
 	}
 }

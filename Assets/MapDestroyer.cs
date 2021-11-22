@@ -32,7 +32,7 @@ public class MapDestroyer : MonoBehaviour
 
         if(ExplodeCell(originCell + new Vector3Int(0,-1,0)))
         {
-            Debug.Log("Explode "+ ExplodeCell(originCell + new Vector3Int(0,-2,0)));
+            ExplodeCell(originCell + new Vector3Int(0,-2,0));
         }
     }
 

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ExplodeScript : MonoBehaviour
 {
-    public float countdown2 = 0.3f;
-	public GameManager gm;
+    public float countdown = 0.2f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -16,13 +15,11 @@ public class ExplodeScript : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		countdown2 -= Time.deltaTime;
-		if (countdown2 <= 0f)
+		countdown -= Time.deltaTime;
+		if (countdown <= 0f)
 		{
            // Debug.Log("Destroy explode");
 			Destroy(gameObject);
-			
-			
 		}
 	}
 
@@ -31,7 +28,6 @@ public class ExplodeScript : MonoBehaviour
 	   if(collider.tag == "Player" || collider.tag == "Player2") {
 			Debug.Log("Destroy player: " + collider.tag);
 			Destroy(collider.gameObject);
-			
 	   }
     }
 }

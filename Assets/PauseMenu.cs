@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUi.SetActive(false);
+        TurnOffGameOverPanel();
         Time.timeScale = 1f;
         GameIsPause = false;
     }
@@ -45,10 +46,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        Debug.Log("dupa");
         Time.timeScale = 1f;
         GameOverMenu.SetActive(false);
-        // Application.LoadLevel(Application.loadedLevel);
         SceneManager.LoadScene("Game");
         Debug.Log("Restart");
     }
@@ -60,13 +59,11 @@ public class PauseMenu : MonoBehaviour
     {
         GameOverMenu.SetActive(true);
         Time.timeScale = 1f;
-        
     }
-    public void WyaczanieGameOverPanel()
+    public void TurnOffGameOverPanel()
     {
         GameOverMenu.SetActive(false);
         Time.timeScale = 0f;
-        
     }
   
 }

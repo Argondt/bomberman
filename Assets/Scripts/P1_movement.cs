@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScriptBehaviour : MonoBehaviour
+public class P1_movement : MonoBehaviour
 {
     public Vector2 speed = new Vector2(20, 20);
     Rigidbody2D m_Rigidbody;
